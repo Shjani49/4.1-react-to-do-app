@@ -18,7 +18,7 @@ class App extends React.Component
   }
   addToDo ( event )
   {
-    event.preventDefault();
+    event.preventDefault(); // Stop the page from reloading.
     console.log( "test add todo!" );
 
   }
@@ -27,7 +27,7 @@ class App extends React.Component
   { // We never re-assign the contents of this.state.
     // this.state is ONLY USED FOR READING VALUES, NOT writing.
     // when we need to update anything in state, we need to use this.setState()
-    // 
+    // this.setState() triggers the render() method, so we can see updated state info in our presentation.
     this.setState ( {[key] : value} );
   }
 
